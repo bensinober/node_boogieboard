@@ -33,9 +33,6 @@ ws.on('connect', function(connection) {
         }
     });
 
-    connection.on('send', function(message) {
-          connection.sendUTF(message);
-    });
     connection.sendUTF("Hello world");
 });
 ws.connect('ws://localhost:8080', 'whiteboard-example');
